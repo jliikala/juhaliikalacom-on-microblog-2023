@@ -792,7 +792,7 @@ a.fediverse::before {
 	}
 
 	.email-subscribe-btn,
-	.nav-item-surprise-me
+	.nav-item-surprise-me,
 	.nav-item-photos
 	{
 		display: none;
