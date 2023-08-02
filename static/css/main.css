@@ -1,0 +1,793 @@
+@font-face {
+  font-family: "iA Writer Mono";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/fonts/iAWriterMonoS-Regular.eot") format("embedded-opentype"),
+    url("/fonts/iAWriterMonoS-Regular.woff2") format("woff2"),
+    url("/fonts/iAWriterMonoS-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "iA Writer Mono";
+  font-weight: normal;
+  font-style: italic;
+  src: url("/fonts/iAWriterMonoS-Italic.eot") format("embedded-opentype"),
+    url("/fonts/iAWriterMonoS-Italic.woff2") format("woff2"),
+    url("/fonts/iAWriterMonoS-Italic.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "iA Writer Mono";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/fonts/iAWriterMonoS-Bold.eot") format("embedded-opentype"),
+    url("/fonts/iAWriterMonoS-Bold.woff2") format("woff2"),
+    url("/fonts/iAWriterMonoS-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "iA Writer Mono";
+  font-weight: bold;
+  font-style: italic;
+  src: url("/fonts/iAWriterMonoS-BoldItalic.eot") format("embedded-opentype"),
+    url("/fonts/iAWriterMonoS-BoldItalic.woff2") format("woff2"),
+    url("/fonts/iAWriterMonoS-BoldItalic.woff") format("woff");
+  font-display: swap;
+}
+
+:root {
+	--text: #000000;
+	--link: #0369c1;
+	--link_visited: #6496c1;
+	--accent1: #333333;
+	--accent2: #666666;
+	--background: #ffffff;
+	--code: #e3e3e3;
+	--button-text: #ffffff;
+	--blockquote: #fffee0;
+	--note: #FFFF00;
+	--subs-btn: #3780bf;
+	--hr: #cccccc;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text: #b9bfc6;
+		--link: #3780bf;
+		--link_visited: #7a9bb7;
+		--accent1: #f8f8f2;
+		--accent2: #f8f8f2;
+		--background: #111920;
+		--code: #44475a;
+		--button-text: #282a36;
+		--blockquote: #44475a;
+		--note: #44475a;
+		--subs-btn: #3780bf;
+		--hr: #44475a;
+	}
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+	overflow-y: scroll;
+}
+
+html, body {
+  height: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+small,
+sub,
+sup,
+.small {
+  font-size: 0.9em;
+}
+
+body {
+	font-family: "iA Writer Mono",
+		monospace,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		"Apple Color Emoji",
+		"Segoe UI Emoji",
+		"Segoe UI Symbol";
+	font-size: 18px;
+	line-height: 1.6;
+	background-color: var(--background);
+	color: var(--text);
+	margin: 0;
+}
+
+header {
+	margin-bottom: 2em;
+}
+
+.post-header {
+	margin-bottom: 0;
+}
+
+header h1 a,
+header h1 a:visited {
+	text-decoration: none;
+	color: var(--text);
+}
+
+header h1 a:hover {
+	color: var(--accent1);
+	text-decoration: none;
+}
+
+header p {
+	margin-top: 0;
+}
+
+a {
+	color: var(--link);
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:visited {
+	color: var(--link_visited)
+}
+
+a.post-date {
+	font-size: 0.8em;
+	color: var(--link);
+	text-decoration: none;
+}
+
+span.post-date {
+	font-size: 0.8em;
+}
+
+a.post-date:hover {
+	text-decoration: none;
+}
+
+.e-content {
+	margin-bottom: 2em;
+	overflow-wrap: anywhere;
+}
+
+.e-content p:first-of-type,
+article p:first-of-type {
+	margin-top: 0;
+}
+
+img.profile-photo {
+	border-radius: 80px;
+}
+
+ul li {
+	line-height: 2rem;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+nav ul li,
+.sidelinks ul li {
+	display: inline;
+	white-space: nowrap;
+}
+
+.wrapper nav a,
+.wrapper nav a:visited,
+.wrapper nav a:hover {
+	text-decoration: none;
+	padding: 5px 10px;
+	border: 1px solid var(--link);
+	color: var(--link);
+	border-radius: 5px;
+	font-size: 0.9em;
+}
+
+.wrapper nav a:hover {
+	background: var(--link);
+	color: var(--button-text);
+}
+
+.bd-form {
+	display: grid;
+	grid-template-columns: minmax(0,1fr) min-content;
+	align-items: center;
+	gap: 1rem;
+}
+
+.bd-email {
+	border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+ }
+
+h1,
+h2,
+h3 {
+	line-height: 1.2em;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+.post-nav {
+	margin-top: 2.5em;
+	margin-bottom: 2.5em;
+	text-align: center;
+}
+
+.post-nav span {
+	padding: 0 5px;
+}
+
+.post-nav a:visited {
+	color: var(--link);
+}
+
+.post-meta {
+	color: var(--accent2);
+}
+
+article img,
+.e-content img {
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+figure {
+	max-width: 100%;
+	margin: 0 auto;
+	margin-bottom: 2em;
+}
+
+figure figcaption {
+	text-align: center;
+	font-size: 0.9em;
+}
+
+.newsletter-cover {
+	margin-bottom: 0;
+}
+
+.newsletter-cover img {
+	max-width: 100%;
+	border-radius: 8px;
+}
+
+ul.post-tags li {
+	display: inline;
+	font-size: 0.8em;
+}
+
+ul.post-tags li a {
+	text-decoration: none;
+}
+
+ul.post-tags,
+ul.post-list {
+	padding-left: 0;
+}
+
+ul.post-list {
+	list-style-type: none;
+}
+
+ul.post-list a.u-url {
+	text-decoration: none;
+}
+
+blockquote {
+	padding: 1em;
+	background: var(--blockquote);
+	border-radius: 5px;
+	font-size: 0.9em;
+	margin: 1em;
+}
+
+blockquote p:last-of-type {
+	margin-bottom: 0;
+}
+
+pre {
+	background: var(--code);
+	padding: 1em;
+	overflow: auto;
+	border-radius: 5px;
+}
+
+hr {
+	margin: 2em 0;
+	border: none;
+	text-align: center;
+}
+
+hr::before {
+	content: "•••••";
+	display: block;
+	color: var(--link);
+}
+
+sup a {
+	text-decoration: none;
+}
+
+.footnote-backref {
+	text-decoration: none;
+}
+
+.microblog_conversation {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.microblog_post {
+	margin-bottom: 2em;
+	padding: 1em;
+	border: 1px solid var(--hr);
+	border-radius: 5px;
+}
+
+.microblog_user {
+	font-weight: bold;
+}
+
+.microblog_user img {
+	vertical-align: middle;
+	width: 40px;
+	height: auto;
+	border-radius: 40px;
+	max-width: 40px !important;
+}
+
+.microblog_time a,
+.microblog_time a:visited {
+	color: var(--accent2);
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+footer {
+	margin-top: 2em;
+	text-align: center;
+}
+
+footer.site-footer {
+	font-size: 0.75em;
+	color: var(--accent2);
+}
+
+footer .attribution {
+	display: block;
+}
+
+.full-archives {
+	overflow-wrap: anywhere;
+}
+
+p.note {
+	background: var(--note);
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 5px 10px;
+}
+
+/* MAKES VIDEO EMBEDS THAT DON'T USE IFRAME RESPONSIVE. DOES NOT WORK WITH YOUTUBE. */
+video {
+	width: 100% !important;
+	height: auto !important;
+}
+
+/* OVERRIDING DEFAULT MICROBLOG CSS. Using !important isn't ideal, but it's the most effective for these things. */
+.photos-grid-container {
+	grid-column-gap: 5px !important;
+}
+
+.field {
+	border: 1px solid var(--link) !important;
+	border-radius: 5px !important;
+}
+
+.bookshelf_book {
+	margin: 2em 0;
+}
+
+.bookshelf_title {
+	font-weight: bold;
+}
+
+body {
+	font-size: 16px;
+	background: var(--background) url(https://juhaliikala.com/uploads/2023/ea173295-c021-4697-8780-0c93faa06cef-9ecdc0da-30ea-40b2-a985-1a80c0a0cb9c.j.jpg) no-repeat center center fixed;
+	background-size: cover;
+	overflow-x: hidden;
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+}
+
+.layout {
+	max-width: 68rem;
+	margin: 8rem auto 2rem;
+	padding: 0 1rem;
+	display: flex;
+	align-items: flex-start;
+	gap: 1rem;
+}
+
+.sidebar {
+	max-width: 22rem;
+	background-color: var(--background);
+	border-radius: 5px;
+	border: 1px solid transparent;
+	padding: 0 1rem;
+	position: relative;
+}
+
+.sidebar .site-nav ul, .sidebar .sidelinks ul {
+	list-style: none;
+	padding: 0;
+}
+
+.sidelinks ul li a, .sidebar .site-nav ul li a {
+	text-decoration: none;
+}
+
+.sidelinks ul li a {
+	display: inline-flex;
+	align-items: center;
+}
+
+.sidebar .site-nav ul li {
+	display: list-item;
+	list-style: inside;
+	list-style-type: square;
+}
+
+.sidebar .site-nav ul li a {
+	border: 0;
+}
+
+.wrapper {
+	max-width: 46rem;
+	background: var(--background);
+	border-radius: 5px;
+	border: 1px solid transparent;
+	padding: 0rem 1rem;
+	margin: 0 auto;
+}
+
+.wrapper .page-content {
+	margin-top: 2rem;
+}
+
+.wrapper .site-header, .wrapper .page-content, .wrapper .site-footer {
+	max-width: 40rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wrapper .site-header {
+	display: none;
+}
+
+header.site-header {
+	margin-bottom: 2em;
+	max-width: 40rem;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+.site-header a.u-photo-link {
+	position: absolute;
+	top: -80px;
+}
+
+.site-header a .profile-photo {
+	background: var(--background);
+	padding: 5px;
+}
+
+header.post-header {
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.site-nav {
+	margin-top: 1rem;
+}
+
+.post-title a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.post-content ul {
+	padding-left: 1rem;
+	list-style-type: square;
+}
+
+.post-content ol li {
+	margin-bottom: 0.5em;
+}
+
+.post-list .post-preview {
+	border-bottom: 1px dashed var(--hr);
+	margin-bottom: 2rem;
+}
+
+.post-list div:last-of-type {
+	border: 0;
+}
+
+.read-more {
+	display: block;
+	text-align: right;
+}
+
+input {
+	background: #f6f6f6;
+	transition: ease background .4s;
+}
+
+input, button {
+	padding: 10px;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid transparent;
+}
+
+input:focus { background: #ececec; }
+input::placeholder { color: #979797; }
+
+input[type=submit] {
+	background: #2675b9;
+	color: #e6e6e6;
+	padding: 8px 14px;
+	transition: ease background .4s;
+	-webkit-appearance: none;
+	cursor: pointer;
+	border: 1px solid transparent;
+}
+
+button, input[type=submit], .btn {
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #2e6da4;
+	transition: ease background .4s;
+}
+
+button:hover, input[type=submit]:hover, .btn:hover {
+	color: #fff;
+	background-color: #286090;
+	border-color: #204d74;
+}
+
+.btn:visited {
+	color: #fff;
+}
+
+.title-button .btn {
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size: 0.9em;
+	text-decoration: none;
+}
+
+.btn svg {
+	fill: #e6e6e6;
+}
+
+.title-button, .site-header h1 {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+	align-items: center;
+	margin-bottom: 1rem;
+	gap: 0.5rem;
+}
+
+.title-button h2 {
+	margin-bottom: 0;
+}
+
+.site-header h1 a {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.subscribe {
+	border-top: 1px dashed var(--hr);
+	border-bottom: 1px dashed var(--hr);
+	padding: 2rem 0;
+	margin: 2rem 0;
+}
+
+.category-list {
+	column-gap: 40px;
+	padding: 0rem 1rem;
+	column-count: 3;
+}
+
+#search-space-form p {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+/* Icons before links */
+
+a[href*="apple.com"]::before,
+a[href*="https://micro.blog"]::before,
+a[href*="youtube.com"]::before,
+a[href*="youtu.be"]::before,
+a[href*="masto.ai"]::before,
+a[href*="me.dm"]::before,
+a[href*="mastodon.social"]::before,
+a[href*="mementomori.social"]::before,
+a[href*="github.com"]::before,
+a[href*="instagram.com"]::before,
+a[href*="linkedin.com"]::before,
+a[href*="tumblr.com"]::before,
+a[href*="wordpress.com"]::before,
+a[href*="spotify.com"]::before,
+a[href*="fontawesome.com"]::before,
+a[href*="unsplash.com"]::before,
+a[href*="wikipedia.org"]::before,
+a[href*="cloudflare.com"]::before,
+a[href*="threads.net"]::before,
+a.fediverse::before
+{
+	content: "";
+	margin-right: 4px;
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	mask-size: auto;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background-color: var(--text);
+	vertical-align: middle;
+}
+a[href*="apple.com"]::before {
+	-webkit-mask: url(/icons/apple.svg) no-repeat 50% 50%;
+	mask: url(/icons/apple.svg) no-repeat 50% 50%;
+}
+
+a[href*="https://micro.blog"]::before {
+	-webkit-mask: url(/icons/microblog.svg) no-repeat 50% 50%;
+	mask: url(/icons/microblog.svg) no-repeat 50% 50%;
+}
+
+a[href*="youtube.com"]::before, a[href*="youtu.be"]::before {
+	-webkit-mask: url(/icons/youtube.svg) no-repeat 50% 50%;
+	mask: url(/icons/youtube.svg) no-repeat 50% 50%;
+}
+
+a[href*="masto.ai"]::before, a[href*="me.dm"]::before, a[href*="mastodon.social"]::before, a[href*="mementomori.social"]::before {
+	-webkit-mask: url(/icons/mastodon.svg) no-repeat 50% 50%;
+	mask: url(/icons/mastodon.svg) no-repeat 50% 50%;
+}
+
+a[href*="github.com"]::before {
+	-webkit-mask: url(/icons/github.svg) no-repeat 50% 50%;
+	mask: url(/icons/github.svg) no-repeat 50% 50%;
+}
+
+a[href*="instagram.com"]::before {
+	-webkit-mask: url(/icons/instagram.svg) no-repeat 50% 50%;
+	mask: url(/icons/instagram.svg) no-repeat 50% 50%;
+}
+
+a[href*="linkedin.com"]::before {
+	-webkit-mask: url(/icons/linkedin.svg) no-repeat 50% 50%;
+	mask: url(/icons/linkedin.svg) no-repeat 50% 50%;
+}
+
+a[href*="tumblr.com"]::before {
+	-webkit-mask: url(/icons/tumblr.svg) no-repeat 50% 50%;
+	mask: url(/icons/tumblr.svg) no-repeat 50% 50%;
+}
+
+a[href*="wordpress.com"]::before {
+	-webkit-mask: url(/icons/wordpress.svg) no-repeat 50% 50%;
+	mask: url(/icons/wordpress.svg) no-repeat 50% 50%;
+}
+
+a[href*="spotify.com"]::before {
+	-webkit-mask: url(/icons/spotify.svg) no-repeat 50% 50%;
+	mask: url(/icons/spotify.svg) no-repeat 50% 50%;
+}
+
+a[href*="fontawesome.com"]::before {
+	-webkit-mask: url(/icons/font-awesome-solid.svg) no-repeat 50% 50%;
+	mask: url(/icons/font-awesome-solid.svg) no-repeat 50% 50%;
+}
+
+a[href*="unsplash.com"]::before {
+	-webkit-mask: url(/icons/unsplash.svg) no-repeat 50% 50%;
+	mask: url(/icons/unsplash.svg) no-repeat 50% 50%;
+}
+
+a[href*="wikipedia.org"]::before {
+	-webkit-mask: url(/icons/wikipedia-w.svg) no-repeat 50% 50%;
+	mask: url(/icons/wikipedia-w.svg) no-repeat 50% 50%;
+}
+
+a[href*="cloudflare.com"]::before {
+	-webkit-mask: url(/icons/cloudflare.svg) no-repeat 50% 50%;
+	mask: url(/icons/cloudflare.svg) no-repeat 50% 50%;
+}
+
+a[href*="threads.net"]::before {
+	-webkit-mask: url(/icons/threads.svg) no-repeat 50% 50%;
+	mask: url(/icons/threads.svg) no-repeat 50% 50%;
+}
+
+a.fediverse::before {
+	-webkit-mask: url(/icons/fediverse.svg) no-repeat 50% 50%;
+	mask: url(/icons/fediverse.svg) no-repeat 50% 50%;
+}
+
+@media screen and (max-width: 1000px) {
+	.sidebar, .page-wrapper .title-follow {
+		display: none;
+	}
+	.wrapper .site-header {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.category-list {
+		column-count: 2;
+	}
+
+	.layout {
+		padding: 0 0.5rem;
+	}
+}
