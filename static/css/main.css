@@ -223,6 +223,12 @@ nav ul li,
 	color: var(--button-text);
 }
 
+.wrapper nav ul {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
 .bd-form {
 	display: grid;
 	grid-template-columns: minmax(0,1fr) min-content;
@@ -791,7 +797,7 @@ a.fediverse::before {
 		padding: 0 0.5rem;
 	}
 
-	.email-subscribe-btn,
+	.title-button .email-subscribe-btn,
 	.nav-item-surprise-me,
 	.nav-item-photos
 	{
