@@ -790,4 +790,11 @@ a.fediverse::before {
 	.layout {
 		padding: 0 0.5rem;
 	}
+
+	.email-subscribe-btn,
+	.nav-item-surprise-me
+	.nav-item-photos
+	{
+		display: none;
+	}
 }
