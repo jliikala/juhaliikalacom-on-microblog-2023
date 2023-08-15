@@ -445,7 +445,7 @@ video {
 
 body {
 	font-size: 16px;
-	background: var(--background) url(https://juhaliikala.com/uploads/2023/ea173295-c021-4697-8780-0c93faa06cef-9ecdc0da-30ea-40b2-a985-1a80c0a0cb9c.j.jpg) no-repeat center center fixed;
+	background: var(--background) url(https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80) no-repeat center center fixed;
 	background-size: cover;
 	overflow-x: hidden;
 	min-height: 100vh;
