@@ -4,9 +4,6 @@
   <h2 class="post-title p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
   <div class="e-content">
       {{ .Summary }}
-      {{ if .Truncated }}
-      <a href="{{ .RelPermalink }}" class="read-more">Continue reading »</a>
-      {{ end }}
   </div>
   {{ else }}
   <div class="e-content">

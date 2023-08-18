@@ -452,7 +452,7 @@ body {
 }
 
 .layout {
-	max-width: 68rem;
+	max-width: 72rem;
 	margin: 8rem auto 2rem;
 	padding: 0 1rem;
 	display: flex;
@@ -476,11 +476,11 @@ body {
 }
 
 .wrapper {
-	max-width: 46rem;
+	max-width: 48rem;
 	background: var(--background);
 	border-radius: 5px;
 	border: 1px solid transparent;
-	padding: 0rem 1rem;
+	padding: 0rem 2rem;
 	margin: 0 auto;
 }
 
@@ -549,12 +549,7 @@ header.post-header {
 }
 
 .post-list div:last-of-type {
-	border: 0;
-}
-
-.read-more {
-	display: block;
-	text-align: right;
+	padding-bottom: 0;
 }
 
 input {
@@ -634,8 +629,8 @@ button:hover, input[type=submit]:hover, .btn:hover {
 .subscribe {
 	border-top: 1px dashed var(--hr);
 	border-bottom: 1px dashed var(--hr);
-	padding: 2rem 0;
 	margin: 2rem 0;
+	padding-top: 1rem 0 2rem 0;
 }
 
 .category-list {
