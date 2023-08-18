@@ -201,8 +201,7 @@ nav ul {
 	padding: 0;
 }
 
-nav ul li,
-.sidelinks ul li {
+nav ul li {
 	display: inline;
 	white-space: nowrap;
 }
@@ -470,28 +469,10 @@ body {
 	position: relative;
 }
 
-.sidebar .site-nav ul, .sidebar .sidelinks ul {
-	list-style: none;
-	padding: 0;
-}
-
-.sidelinks ul li a, .sidebar .site-nav ul li a {
-	text-decoration: none;
-}
-
-.sidelinks ul li a {
-	display: inline-flex;
-	align-items: center;
-}
-
-.sidebar .site-nav ul li {
-	display: list-item;
-	list-style: inside;
-	list-style-type: square;
-}
-
-.sidebar .site-nav ul li a {
-	border: 0;
+.sidebar .subscribe {
+	border-bottom: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 .wrapper {
