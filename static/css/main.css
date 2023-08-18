@@ -776,6 +776,9 @@ a.fediverse::before {
 	.layout {
 		padding: 0 0.5rem;
 	}
+	.wrapper {
+		padding: 0rem 1rem;
+	}
 
 	.title-button .email-subscribe-btn,
 	.nav-item-surprise-me,
