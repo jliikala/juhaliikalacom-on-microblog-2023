@@ -22,8 +22,10 @@
 		<a href="{{ .Permalink }}" class="u-url"><span class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}">{{ .Date.Format "Jan 2, 2006" }}</span></a>:
 		{{ if .Title }}
 			<span class="p-name">New article: <b>{{ .Title }}</b></span>
-		{{ end }}
+		{{ else }}
+		<span class="p-name">New article: <b>{{ .Title }}</b></span>
 		<span class="p-summary">{{ .Summary | truncate 150 }}</span>
+		{{ end }}
 	</p>
 
 	{{ end }}

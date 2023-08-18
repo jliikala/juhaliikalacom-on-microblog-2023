@@ -8,7 +8,12 @@
       </svg>
 		</a>
 		</h1>
-	<p class="description">{{ .Site.Params.itunes_description | markdownify }}</p>
+	<div class="description">
+		{{ partial "about-this-blog.html" . }}
+	</div>
+	<div class="subscribe">
+		{{ partial "subscribe-header.html" }}
+	</div>
 	<nav class="site-nav">
 		<ul>
 	{{ range .Site.Menus.main }}

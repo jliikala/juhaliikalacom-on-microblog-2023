@@ -558,9 +558,13 @@ header.post-header {
 	margin-bottom: 0.5em;
 }
 
-.post-list .post-preview {
+.post-list .h-entry, .h-feed .h-entry {
 	border-bottom: 1px dashed var(--hr);
 	margin-bottom: 2rem;
+}
+
+.h-feed .h-entry {
+	padding-bottom: 1rem;
 }
 
 .post-list div:last-of-type {
