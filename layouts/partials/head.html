@@ -20,7 +20,14 @@
   <meta name="description" content="{{ if .Summary }}{{ .Summary | truncate 60 }} {{ else }} {{ .Site.Params.itunes_description | truncate 60 }} {{ end}}">
   <meta name="theme-color" content="#0000EE" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#282a36" media="(prefers-color-scheme: dark)">
-  <link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png" type="image/x-icon" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://juhaliikala.com//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://juhaliikala.com//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://juhaliikala.com/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://juhaliikala.com/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://juhaliikala.com/favicon-16x16.png">
+  <link rel="manifest" href="https://juhaliikala.com/site.webmanifest">
+
   <link rel="stylesheet" href="{{ "css/main.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
   <link rel="stylesheet" href="{{ "custom.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
   <link rel="canonical" href="{{ .Permalink }}">
