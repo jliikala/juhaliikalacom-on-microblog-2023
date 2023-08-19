@@ -475,6 +475,10 @@ body {
 	padding-bottom: 0;
 }
 
+.subs-title {
+	margin-top: 1rem;
+}
+
 .wrapper {
 	max-width: 48rem;
 	background: var(--background);
