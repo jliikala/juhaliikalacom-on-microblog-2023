@@ -638,6 +638,10 @@ button:hover, input[type=submit]:hover, .btn:hover {
 	padding: 2rem 0;
 }
 
+.subscribe p:last-of-type {
+	margin-bottom: 0;
+}
+
 .category-list {
 	column-gap: 40px;
 	padding: 0rem 1rem;
