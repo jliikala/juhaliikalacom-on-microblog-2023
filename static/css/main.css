@@ -635,7 +635,7 @@ button:hover, input[type=submit]:hover, .btn:hover {
 	border-top: 1px dashed var(--hr);
 	border-bottom: 1px dashed var(--hr);
 	margin: 2rem 0;
-	padding-top: 1rem 0 2rem 0;
+	padding: 2rem 0;
 }
 
 .category-list {
