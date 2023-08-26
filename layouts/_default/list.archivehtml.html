@@ -23,7 +23,7 @@
 		{{ if .Title }}
 			<span class="p-name">New article: <b>{{ .Title }}</b></span>
 		{{ else }}
-		<span class="p-name">New article: <b>{{ .Title }}</b></span>
+		<span class="p-name"><b>{{ .Title }}</b></span>
 		<span class="p-summary">{{ .Summary | truncate 150 }}</span>
 		{{ end }}
 	</p>
