@@ -4,7 +4,9 @@
 <body>
   <div class="layout">
     <div class="wrapper">
+      {{ if .IsHome }}
       {{ partial "header.html" . }}
+      {{ end }}
       <div class="page-content">
         <div class="page-wrapper">
           {{ block "main" . }}{{ end }}

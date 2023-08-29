@@ -80,10 +80,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 	overflow-y: scroll;
-}
-
-html, body {
-  height: 100%;
+	min-height: 100%;
 }
 
 input, button, textarea, select {
@@ -490,10 +487,6 @@ video {
 	margin-right: auto;
 }
 
-.wrapper .site-header {
-	display: none;
-}
-
 header.site-header {
 	margin-bottom: 2em;
 	max-width: 40rem;
@@ -762,9 +755,6 @@ a.fediverse::before {
 @media screen and (max-width: 1000px) {
 	.sidebar, .page-wrapper .title-follow {
 		display: none;
-	}
-	.wrapper .site-header {
-		display: block;
 	}
 }
 
