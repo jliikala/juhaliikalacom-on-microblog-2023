@@ -457,12 +457,12 @@ header.site-header, nav.site-nav, main.site-main, footer.site-footer {
 	position: relative;
 }
 
-.site-header, .site-main {
-	background: var(--background);
+.site-header {
+	margin-bottom: 3rem;
 }
 
-.site-main {
-	margin-top: 3rem;
+.site-header, .site-main {
+	background: var(--background);
 }
 
 .site-nav {
