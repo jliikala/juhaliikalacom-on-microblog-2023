@@ -3,17 +3,16 @@
 {{ partial "head.html" . }}
 <body>
   <div class="layout">
-    <div class="wrapper">
-      {{ if .IsHome }}
-      {{ partial "header.html" . }}
-      {{ end }}
-      <div class="page-content">
-        <div class="page-wrapper">
-          {{ block "main" . }}{{ end }}
-        </div>
+    {{ if .IsHome }}
+    {{ partial "header.html" . }}
+    {{ partial "navigation.html" . }}
+    {{ end }}
+    <main class="site-main">
+      <div class="main-content">
+        {{ block "main" . }}{{ end }}
       </div>
-      {{ partial "footer.html" . }}
-    </div>
+    </main>
+    {{ partial "footer.html" . }}
   </div>
   {{ range .Site.Params.plugins_js }}
   <script src="{{ . }}"></script>
