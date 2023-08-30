@@ -5,8 +5,8 @@
   <div class="layout">
     {{ if .IsHome }}
     {{ partial "header.html" . }}
-    {{ partial "navigation.html" . }}
     {{ end }}
+    {{ partial "navigation.html" . }}
     <main class="site-main">
       <div class="main-content">
         {{ block "main" . }}{{ end }}

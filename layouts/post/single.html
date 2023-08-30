@@ -21,9 +21,6 @@
   {{ end }}
 
 </div>
-{{ if eq .Params.microblog false }}
-  {{ partial "subscribe-section.html" . }}
-{{ end }}
 {{ if .Site.Params.include_conversation }}
 {{ $microblog_url := print "https://micro.blog/" .Site.Author.username }}
 <section class="conversation">

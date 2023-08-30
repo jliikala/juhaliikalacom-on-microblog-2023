@@ -461,9 +461,12 @@ header.site-header, nav.site-nav, main.site-main, footer.site-footer {
 	background: var(--background);
 }
 
+.site-main {
+	margin-top: 3rem;
+}
+
 .site-nav {
 	background: var(--background-dark);
-	margin-bottom: 3rem;
 }
 
 .sidebar {
