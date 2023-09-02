@@ -668,7 +668,6 @@ a[href*="spotify.com"]::before,
 a[href*="fontawesome.com"]::before,
 a[href*="unsplash.com"]::before,
 a[href*="wikipedia.org"]::before,
-a[href*="cloudflare.com"]::before,
 a[href*="threads.net"]::before,
 a.fediverse::before
 {
@@ -746,11 +745,6 @@ a[href*="unsplash.com"]::before {
 a[href*="wikipedia.org"]::before {
 	-webkit-mask: url(/icons/wikipedia-w.svg) no-repeat 50% 50%;
 	mask: url(/icons/wikipedia-w.svg) no-repeat 50% 50%;
-}
-
-a[href*="cloudflare.com"]::before {
-	-webkit-mask: url(/icons/cloudflare.svg) no-repeat 50% 50%;
-	mask: url(/icons/cloudflare.svg) no-repeat 50% 50%;
 }
 
 a[href*="threads.net"]::before {
