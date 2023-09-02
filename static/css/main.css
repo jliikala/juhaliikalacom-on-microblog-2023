@@ -762,6 +762,12 @@ a.fediverse::before {
 		padding-bottom: 0;
 	}
 
+	.site-nav ul {
+		font-size: 90%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	.title-button .email-subscribe-btn,
 	.nav-item-surprise-me,
 	.nav-item-photos
