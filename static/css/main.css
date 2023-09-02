@@ -746,6 +746,7 @@ a.fediverse::before {
 
 	.layout {
 		padding: 0;
+		margin-top: 0;
 	}
 
 	header.site-header, nav.site-nav, main.site-main, footer.site-footer {
