@@ -35,12 +35,12 @@
   <link rel="preload" href="{{ "/fonts/iAWriterMonoS-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ "/fonts/iAWriterMonoS-Bold.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 
-  {{ if .RSSLink -}}
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .RelPermalink }}" rel="alternate" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
   <link href="{{ "podcast.xml" | absURL }}" rel="alternate" type="application/rss+xml" title="Podcast" />
-  <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ "feed.json" | absURL }}" />
+  <link rel="alternate" type="application/json" title="{{ $.Site.Title }}" href="{{ "feed.json" | absURL }}" />
   <link rel="EditURI" type="application/rsd+xml" href="{{ "rsd.xml" | absURL }}" />
-  {{ end -}}
+  {{ end }}
 
   {{ template "_internal/schema.html" . }}
   {{ template "_internal/opengraph.html" . }}
