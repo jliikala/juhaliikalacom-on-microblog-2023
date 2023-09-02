@@ -112,7 +112,6 @@ html {
 	background-size: cover;
 	background-color: var(--background);
 	height: 100%;
-	overflow: hidden;
 }
 
 body {
