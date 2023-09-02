@@ -6,12 +6,12 @@
     {{ if .IsHome }}
     {{ partial "header.html" . }}
     {{ end }}
-    {{ partial "navigation.html" . }}
     <main class="site-main">
       <div class="main-content">
         {{ block "main" . }}{{ end }}
       </div>
     </main>
+    {{ partial "navigation.html" . }}
     {{ partial "footer.html" . }}
   </div>
   {{ range .Site.Params.plugins_js }}

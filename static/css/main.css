@@ -583,6 +583,7 @@ button:hover, input[type=submit]:hover, .btn:hover {
 
 nav.site-nav {
 	padding: 1rem;
+	text-align: center;
 }
 
 .site-nav ul {
