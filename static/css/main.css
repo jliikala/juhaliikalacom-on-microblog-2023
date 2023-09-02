@@ -776,6 +776,10 @@ a.fediverse::before {
 }
 
 @media screen and (max-width: 500px) {
+	html {
+		background: none;
+		background-color: var(--background);
+	}
 	.category-list {
 		column-count: 2;
 	}
