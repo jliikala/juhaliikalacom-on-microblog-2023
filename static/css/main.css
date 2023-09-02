@@ -208,28 +208,6 @@ nav ul li {
 	white-space: nowrap;
 }
 
-.wrapper nav a,
-.wrapper nav a:visited,
-.wrapper nav a:hover {
-	text-decoration: none;
-	padding: 5px 10px;
-	border: 1px solid var(--link);
-	color: var(--link);
-	border-radius: 5px;
-	font-size: 0.9em;
-}
-
-.wrapper nav a:hover {
-	background: var(--link);
-	color: var(--button-text);
-}
-
-.wrapper nav ul {
-	display: flex;
-	gap: 0.5rem;
-	flex-wrap: wrap;
-}
-
 .bd-form {
 	display: grid;
 	grid-template-columns: minmax(0,1fr) min-content;
@@ -495,19 +473,6 @@ header.site-header, nav.site-nav, main.site-main, footer.site-footer {
 	margin-top: 1rem;
 }
 
-.wrapper {
-	max-width: 48rem;
-	background: var(--background);
-	border-radius: 5px;
-	border: 1px solid transparent;
-	padding: 0rem 2rem;
-	margin: 0 auto;
-}
-
-.wrapper .page-content {
-	margin-top: 2rem;
-}
-
 .site-header a.u-photo-link {
 	position: absolute;
 	top: -50px;
@@ -769,12 +734,6 @@ a.fediverse::before {
 	mask: url(/icons/fediverse.svg) no-repeat 50% 50%;
 }
 
-@media screen and (max-width: 1000px) {
-	.sidebar, .page-wrapper .title-follow {
-		display: none;
-	}
-}
-
 @media screen and (max-width: 500px) {
 	html {
 		background: none;
@@ -785,10 +744,16 @@ a.fediverse::before {
 	}
 
 	.layout {
-		padding: 0 0.5rem;
+		padding: 0;
 	}
-	.wrapper {
-		padding: 0rem 1rem;
+
+	header.site-header, nav.site-nav, main.site-main, footer.site-footer {
+		padding: 1rem;
+	}
+
+	.site-header {
+		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 
 	.title-button .email-subscribe-btn,
