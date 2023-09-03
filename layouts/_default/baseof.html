@@ -2,6 +2,7 @@
 <html lang="en">
 {{ partial "head.html" . }}
 <body {{ if .IsHome }}class="home"{{ end }}>
+  <div class="site-cover"></div>
   <div class="layout">
     {{ if .IsHome }}
     {{ partial "header.html" . }}
