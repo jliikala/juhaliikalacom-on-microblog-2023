@@ -107,15 +107,6 @@ sup,
   font-size: 0.9em;
 }
 
-html {
-	background: url(https://images.unsplash.com/photo-1617515786266-6bf4b29ab87b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2565&q=80) no-repeat center center fixed;
-	background-size: cover;
-	background-color: var(--background);
-	min-height: 100%;
-	min-height: 100vh;
-  min-height: -webkit-fill-available;
-}
-
 body {
 	font-family: "iA Writer Mono",
 		monospace,
