@@ -405,7 +405,7 @@ footer {
 
 footer.site-footer {
 	font-size: 0.75em;
-	color: var(--accent2);
+	color: #f8f8f2;
 }
 
 footer .attribution {
@@ -562,6 +562,7 @@ input[type=submit] {
 	color: #e6e6e6;
 	padding: 8px 14px;
 	transition: ease background .4s;
+	appearance: none;
 	-webkit-appearance: none;
 	cursor: pointer;
 	border: 1px solid transparent;
@@ -686,6 +687,9 @@ a.fediverse::before
 	mask-size: cover;
 	background-color: var(--text);
 	vertical-align: middle;
+}
+.site-footer a::before {
+	background-color: #b9bfc6;
 }
 a[href*="apple.com"]::before {
 	-webkit-mask: url(/icons/apple.svg) no-repeat 50% 50%;
