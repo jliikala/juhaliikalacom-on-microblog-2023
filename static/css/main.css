@@ -125,12 +125,14 @@ body {
 	color: var(--text);
 	margin: 0;
 	background-color: #111920;
-	background: url(https://images.unsplash.com/photo-1617515786266-6bf4b29ab87b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2565&q=80);
+	background: url(https://images.unsplash.com/photo-1655374631048-1416d81cd20a?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=3000);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 	overflow-x: hidden;
         min-height: 100vh;
+	width: 100vw;
+        height: 100vh;
 }
 
 .post-header {
